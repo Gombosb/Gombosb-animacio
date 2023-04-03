@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <title>
+           Multiverse of Meme's
+        </title>
+        <link rel="stylesheet" href="oldal2.css"/>      
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <div id="hatter">			
+			<img id="hatter1" src="Képek/háttér1.jpg"/>
+			<img id="hatter2" src="Képek/háttér2.jpg"/>
+            <img id="mario1" src="Képek/Mario1.jpg"/>
+            <img id="mario2" src="Képek/Mario2.png"/>
+            <img id="deadpoolbal" src="Képek/Deadpoolbal.jpg"/>
+            <img id="deadpooljobb" src="Képek/Deadpooljobb.jpg"/>
+            <img id="bifrost" src="Képek/Bifrost.jpg"/>
+            <img id="llama" src="Képek/Llama.png"/>									
+		 <script type="text/javascript">
+            /* Javascript, deklarĂĄciĂł */
+			var hatter1=document.getElementById("hatter1");
+			var hatter2=document.getElementById("hatter2");
+            var mario1=document.getElementById("mario1");
+            var mario2=document.getElementById("mario2");
+            var deadpoolbal=document.getElementById("deadpoolbal");
+            var deadpooljobb=document.getElementById("deadpooljobb");
+            var bifrost=document.getElementById("bifrost");
+            var llama=document.getElementById("llama");
+			var szam=0;
+			var szam2=600;
+			var karsz=0;
+			var frame=0;			
+			var idozit=0;	
+			var t1;
+			var t2;
+				/* Timer */						
+			t1=setInterval(mozgas,10);			
+			t2=setInterval(karakter,200);			
+						
+			/* A karakter mozgĂĄsa */	
+			function karakter(){					
+			if(karsz%2==0)
+			{
+			 mario.src="mario1";
+			}else
+			{
+			 mario.src="mario2";
+			}	
+			karsz++;			
+			if(karsz==2)
+				{
+				karsz=0
+				}	
+			frame++;		
+			}
+			
+			/* A hĂĄttĂŠr mozgĂĄsa */
+			function mozgas()
+			{						
+			szam2--;
+			szam--;
+			hatter1.style.left=szam+"px";
+			hatter2.style.left=szam2+"px";					
+			if(szam<=-600)
+			{
+			szam=600;
+			}
+			if(szam2<=-600)
+			{
+			szam2=600;
+			}
+			}
+			
+        </script>				
+		</div>
+		<div id="midle">
+		<p style="text-align: center;"><a href="oldal1.html">Vissza a főoldalra</a></p>
+        <p style="text-align: center;"><a href="oldal2.html">Újrajátszás</a></p>
+		<p style="text-align: center;">	Készítette: Gombos Bálint</p>
+		</div>		
+    </body>
+</html>

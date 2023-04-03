@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <title>
+           Multiverse of Meme's
+        </title>
+        <link rel="stylesheet" href="oldal1.css" />      
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <div id="mainlap">			
+			<img id="hatter1" src="Képek/háttér1.jpg"/>
+			<img id="hatter2" src="Képek/háttér2.jpg"/>										
+		 <script type="text/javascript">
+            /* Javascript, deklarĂĄciĂł */
+			var hatter1=document.getElementById("hatter1");
+			var hatter2=document.getElementById("hatter2");			
+			var szam=0;
+			var szam2=600;
+			var karsz=0;
+			var frame=0;			
+			var idozit=0;	
+			var t1;
+			var t2;
+				/* Timer */						
+			t1=setInterval(mozgas,10);			
+			t2=setInterval(kar,200);			
+						
+			/* A karakter mozgĂĄsa */	
+			function kar(){					
+			if(karsz%2==0)
+			{
+				embor.src="mario1.png";
+			}else
+			{
+				embor.src="mario2.png";
+			}	
+			karsz++;			
+			if(karsz==2)
+				{
+				karsz=0
+				}	
+			frame++;		
+			}
+			
+			/* A hĂĄttĂŠr mozgĂĄsa */
+			function mozgas()
+			{						
+			szam2--;
+			szam--;
+			hatter1.style.left=szam+"px";
+			hatter2.style.left=szam2+"px";					
+			if(szam<=-600)
+			{
+			szam=600;
+			}
+			if(szam2<=-600)
+			{
+			szam2=600;
+			}
+			}
+			
+        </script>				
+		</div>
+		<div id="midle">
+		<p style="text-align: center;"><a href="oldal2.html">Animáció megteintése</a></p>
+		<p style="text-align: center;">	Készítette: Gombos Bálint</p>
+		</div>		
+    </body>
+</html>

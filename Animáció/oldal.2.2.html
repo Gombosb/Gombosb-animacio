@@ -1,0 +1,246 @@
+<html lang="hu"><head>
+    <title>
+        Mordor adventure
+    </title>
+    <link rel="stylesheet" href="oldal2.css">      
+    <meta charset="utf-8">
+</head>
+<body>
+    <div id="mainlap">
+        <div id="hatter">
+        <img id="hatter1" src="Képek/háttér1.jpg" style="left: 31px;">
+        <img id="hatter2" src="Képek/háttér2.jpg" style="left: -569px;">			
+        </div>
+    <img id="mario1" src="Képek/Mario1.jpg">
+    <img id="deadpoolbal" src="Képek/Deadpoolbal.jpg" style="left: 600px; bottom: 52px;">
+    <img id="storm" src="storm.png" style="left: 80px;">
+    <img id="bifrost" src="Képek/Bifrost.jpg" style="left: 600px;">
+    <img id="llama" src="Képek/Llama.png" style="left: 600px;">
+    <img id="fon" src="fon.png" style="top: -135px;">
+    <img id="len" src="fon.png" style="bottom: -209px;">
+    <p id="laci"></p>
+    <p id="demon"></p>
+    <p id="final">Mostmár készen állok!!</p>
+     <script type="text/javascript">
+        /* Javascript, ha kell. */
+        var hatter1=document.getElementById("hatter1");
+        var hatter2=document.getElementById("hatter2");
+        var deadpoolbal=document.getElementById("deadpoolbal");
+        var bifrost=document.getElementById("bifrost");
+        var llama=document.getElementById("llama");
+        var mario1=document.getElementById("mario1");
+        var demon=document.getElementById("demon");
+        var fon=document.getElementById("fon");
+        var len=document.getElementById("len");
+        var final=document.getElementById("final");
+        var szam=0;
+        var szam2=600;
+        var karsz=0;
+        var stopper=0;
+        var sarijon=600;
+        var sarijon3=-200;
+        var sarijon4=-200;
+        var kameha=10;
+        var kameha2=95;
+        var kameha3=95;
+        var idozit=0;
+        var villamlas=270;
+        var balta=80;
+        var fel=-330;
+        var le=-404;
+        var t1;
+        var t2;
+        var szakasz1=false;
+        var szakasz2=false;
+        var szakasz3=false;			
+        kibekapcs();
+        
+        function kibekapcs(){			
+        if(idozit%2==0){
+        t1=setInterval(mozgas,10);			
+        t2=setInterval(kar,200);			
+        }
+        else{
+        clearInterval(t1);
+        clearInterval(t2);			
+        }
+        }	
+        
+        var t3=setInterval(shot,10);
+        
+        function kar(){			
+        karsz++;
+        stopper++;
+        if(karsz==600)
+        {kar=1}
+        if(karsz%2==0){embor2.src="Mario1.jpg";}
+        else{embor2.src="Mario2.png";}			
+        }
+        
+        function shot(){
+        if(stopper==30)
+        {
+        htmlachi.style.left="600px";
+        }
+        if(stopper==50)
+        {
+        htmlachi.style.left="600px";
+        }
+        if(stopper>=20 && szakasz1==false){
+        idozit=1;
+        kibekapcs();			
+        if(kameha<300 && szakasz1==false)
+        {
+        kameha+=4;
+        sarijon-=4;
+        sari.style.left=sarijon+"px";
+        kame.style.width=kameha+"px";
+        embor2.src="Mario2.png";
+        }
+        else{
+        sari.style.left="600px";
+        kame.style.left="600px";
+        sarijon=600;
+        htmlachi.style.left="10px";
+        idozit=0;
+        kibekapcs();			
+        szakasz1=true;			
+        }
+        }		
+        if(stopper>=40 && szakasz2==false){
+        idozit=1;
+        kibekapcs();		
+        if(kameha2<300 && szakasz2==false)
+        {
+        kameha2+=3;
+        sarijon-=3;
+        sari.src="sarie3.png";
+        sari.style.left=sarijon+"px";
+        kame.src="fire.png";
+        kame.style.width="150px";
+        kame.style.left=kameha2+"px";
+        embor2.src="emborkame.png";
+        }
+        else{
+        sari.style.left="600px";
+        kame.style.left="600px";
+        htmlachi.src="htmlachi2.png";
+        htmlachi.style.left="10px";
+        idozit=0;
+        kibekapcs();			
+        szakasz2=true;
+        sari.style.bottom="-200px";
+        sari.style.left="400px";
+        }					
+        }			
+        if(stopper>=60 && szakasz3==false){
+        embor2.src="embor3.png";
+        idozit=1;
+        kibekapcs();			
+        if(kameha3<3300 && szakasz3==false)
+        {
+        sarijon4+=3;
+        if(sarijon3<=50){
+        sarijon3+=3;
+        sari.style.bottom=sarijon3+"px";
+        }
+        if(sarijon4>=500){						
+        }
+        if(sarijon4>=200){			
+        demon.innerHTML="A lelkedért jöttem halandó!";
+        laci.innerHTML="";
+        }
+        if(sarijon4>=1000){
+        laci.innerHTML="Szerusz öcsém oszt köszönni ki fog";
+        demon.innerHTML="";
+        }
+        if(sarijon4>=1700){			
+        demon.innerHTML="Törődj bele ember elért téged a vég";
+        laci.innerHTML="";
+        }
+        if(sarijon4>=2400){			
+        laci.innerHTML="Főnököm éppen haza igyekszem<br> csinálni a beadandóm<br> úgyhogy értékelném ha máshol méláznál";
+        demon.innerHTML="";
+        }
+        if(sarijon4>=3400){			
+        demon.innerHTML="Védd magad halandó!!!";
+        laci.innerHTML="";
+        }
+        if(sarijon4>=4200){			
+        laci.innerHTML="gondolat:Ez a tróger tényleg nekem ugrik<br> még szerencse, hogy favágásból gyüvök";
+        demon.innerHTML="";
+        embor2.src="emborkame.png";
+        storm.style.left=balta+"px";
+        }
+        if(sarijon4>=5200){		
+        villam.style.left=villamlas+"px";
+        laci.innerHTML="";
+        }
+        if(sarijon4>=5800){			
+        villam.style.left="600px";
+        sari.style.left="600px";			
+        htmlachi.src="htmlachi3.png";
+        htmlachi.style.left="10px";
+        }
+        if(sarijon4>=6500){
+        if(fel<=-136){
+        fel++;						
+        fon.style.top=fel+"px";		
+        }
+        if(le<=-210){			
+        le++;						
+        len.style.bottom=le+"px";
+        }
+        else{
+        final.innerHTML="Mostmár készen állok!!"			
+        }
+        htmlachi.style.left="600px";
+        }			
+        //kameha3+=3;
+        sari.src="sarie4.png";			
+        //kame.src="fire.png";
+        //kame.style.width="150px";
+        //kame.style.left=kameha3+"px";			
+        }
+        else{
+        sari.style.left="600px";
+        kame.style.left="600px";
+        htmlachi.src="htmlachi2.png";
+        htmlachi.style.left="10px";
+        idozit=0;
+        kibekapcs();			
+        szakasz3=true;
+        }					
+        }			
+        }
+        
+        function mozgas()
+        {						
+        szam2--;
+        szam--;
+        taj.style.left=szam+"px";
+        taj2.style.left=szam2+"px";			
+        if(stopper>=12)
+        {			
+        }
+        if(szam<=-600)
+        {
+        szam=600;
+        }
+        if(szam2<=-600)
+        {
+        szam2=600;
+        }
+        }
+    </script>				
+    </div>
+    <div id="midle"><p>
+            <a href="animation.html">Újrajátszás</a>
+            <br>
+            <a href="index.html">Főoldal</a>
+            <br>
+            Készítette:Juhos László
+            </p>
+    </div>		
+
+</body></html>

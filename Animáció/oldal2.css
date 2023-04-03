@@ -1,0 +1,31 @@
+#mainlap{
+	overflow:hidden;
+	position:relative;	
+	margin:auto;
+	height:330px;
+	width:600px;	
+}
+#hatter1{
+	position:absolute;
+	z-index:-1;
+	left:100px;
+	height:330px;
+	width:600px;
+}
+
+#hatter2{
+	position:absolute;
+	z-index:-1;
+	left:600px;
+	height:330px;
+	width:600px;
+
+}
+
+#mario{
+	position:absolute;
+	left:20px;
+	bottom:60px;
+	z-index:0;
+}
+
